@@ -3,9 +3,9 @@ layout: default
 title: "Veículos disponíveis"
 ---
 
-{%- if posts.size > 0 -%}
+{%- if site.posts.size > 0 -%}
   <ul class="post-list">
-    {%- for post in posts -%}
+    {%- for post in site.posts -%}
     <li>
       <a class="post-link" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
