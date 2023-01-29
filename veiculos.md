@@ -5,7 +5,8 @@ title: "Veículos disponíveis"
 
 {%- if site.posts.size > 0 -%}
   <ul class="post-list">
-    {%- for post in site.posts -%}
+    {{ assign filtered_posts = site.posts | find: "category", "suv" }}
+    {%- for post in filtered_posts -%}
     <li>
       <a class="post-link" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
