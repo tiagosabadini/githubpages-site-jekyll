@@ -6,11 +6,11 @@ title: "Veículos disponíveis"
 {%- if site.posts.size > 0 -%}
   <ul class="post-list">
     {%- for post in site.posts -%}
-      {%- if post.category == suv -%}
       <li>
         <a class="post-link" href="{{ post.url | relative_url }}">
           {{ post.title | escape }}
         </a>
+        <p>Categoria: {{ post.category }}</p>
         <p>Franquia: {{ post.franschise }}</p>
         <p>Tempo do contrato: {{ post.timeContract }}</p>
         <p>Valor da mensalidade: {{ post.price }}</p>
@@ -19,7 +19,6 @@ title: "Veículos disponíveis"
           {{ post.excerpt }}
         {%- endif -%}
       </li>
-      {%- endif -%}
     {%- endfor -%}
   </ul>
 {%- endif -%}
